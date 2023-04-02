@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends 'users/index.html'%}
+{% load static %}
+{% block contents %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <center>
+        <div class="col-12 col-md-4 mb-4" align="center" style="background-color: aqua;">
+            <div class="card h-100" style="background-color: bisque;">
+                <h1 class="h4" align="center">Registration Form</h1><br>
+                <form action="#" method="POST">
+                {% csrf_token %}
+    
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>Name</td>
+                        <td>{{form.name}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Loginid</td>
+                        <td>{{form.loginid}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Password</td>
+                        <td>{{form.password}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Mobile</td>
+                        <td>{{form.mobile}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td></td>
+                        <td>Email</td>
+                        <td>{{form.email}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Locality</td>
+                        <td>{{form.locality}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>City</td>
+                        <td>{{form.city}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>State</td>
+                        <td>{{form.state}}</td>
+                    </tr>
+                </table>
+                <button  class="btn btn-primery-success"  type="submit">Register</button>
+            </form>
+            </div>
+    </div>
+</center>
+    
+</body>
+</html>
+{% endblock %}

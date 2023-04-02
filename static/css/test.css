@@ -1,0 +1,16 @@
+body {
+    background-color:white;
+}
+
+.container-fluid {
+    padding-left: 100px;
+}
+
+#navbarNav{
+    padding-right: 100px;
+}
+.jumbotron{
+    background-color: black;
+    text-align: center;
+    
+}
