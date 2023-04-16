@@ -14,8 +14,8 @@
         <div class="col-12 col-md-4 mb-4" align="center" style="background-color: aqua;">
             <div class="card h-100" style="background-color: bisque;">
                 <h1 class="h4" align="center">Registration Form</h1><br>
-                <form action="#" method="POST">
-                {% csrf_token %}
+                <form action="{% url 'register'%}" method="POST">
+                    {% csrf_token %}
     
                 <table>
                     <tr>
@@ -59,8 +59,15 @@
                         <td>State</td>
                         <td>{{form.state}}</td>
                     </tr>
-                </table>
-                <button  class="btn btn-primery-success"  type="submit">Register</button>
+
+                {% if messages %}
+                {% for message in messages %}
+                <font style="color: green;">{{message}}</font>
+                {% endfor %}
+                {% endif %}
+                </table><br>
+
+                <button type="submit" class="btn btn-success">Register</button><br><br>
             </form>
             </div>
     </div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'users/index.html'%}
+{% load static %}
+{% block contents %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+    <center>
+    <div class="col-12 col-md-4 mb-4">
+        <h1>
+            User Login
+        </h1>
+        <form action="{% url 'logincheck'%}" method="POST">
+            <table>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" name="loginid" required placeholder="Enter loginid">
+
+                </div><br><br>
+                <div class="col-md-12">
+                    <input type="text" class="form-control" name=" password" required placeholder="Enter password">
+                </div>
+                <tr>
+                    <td>
+                        <button>Login</button>
+                    </td>
+                    <td>
+                        <button>Reset</button>
+                    </td>
+                </tr>
+            </div>
+        </table>
+        </form>
+
+    </div>
+</center>
+</div><br><br><br><br><br><br><br>
+
+    
+</body>
+</html>
+{% endblock %}
